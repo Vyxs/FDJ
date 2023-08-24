@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">fdjapp</string>
+    <string name="back">Back</string>
+    <string name="search_by_league">Search by league</string>
+    <string name="badge">Badge</string>
+    <string name="team_banner">Team banner</string>
+</resources>

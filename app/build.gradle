@@ -1,0 +1,46 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+apply plugin: 'kotlin-kapt'
+apply from: '../buildsys/dependencies.gradle'
+apply from: '../buildsys/config.gradle'
+
+android {
+    namespace 'fr.vyxs.fdjapp'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "fr.vyxs.fdjapp"
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+        buildConfigField "String", "BASE_URL", base_url
+        buildConfigField "String", "DB_NAME", db_name
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    dependencies { implementation implementations }
+    dependencies { kapt annotationProcessors }
+}

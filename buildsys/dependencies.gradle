@@ -1,0 +1,42 @@
+ext {
+    libs = [
+        coreKtx: '1.7.0',
+        appCompat: '1.3.0',
+        material: '1.4.0',
+        constraintLayout: '2.0.4',
+        lifecycleLiveDataKtx: '2.5.1',
+        lifecycleViewModelKtx: '2.5.1',
+        retrofit: '2.9.0',
+        gson: '2.9.0',
+        retrofitConverterGson: '2.9.0',
+        coroutinesCore: '1.6.4',
+        coroutinesAndroid: '1.6.4',
+        navigationFragmentKtx: '2.5.3',
+        navigationUiKtx: '2.5.3',
+        coil: '2.2.2',
+        roomRuntime: '2.4.3',
+        roomCompiler: '2.4.3'
+    ]
+
+    implementations = [
+        "androidx.core:core-ktx:${libs.coreKtx}",
+        "androidx.appcompat:appcompat:${libs.appCompat}",
+        "com.google.android.material:material:${libs.material}",
+        "androidx.constraintlayout:constraintlayout:${libs.constraintLayout}",
+        "androidx.lifecycle:lifecycle-livedata-ktx:${libs.lifecycleLiveDataKtx}",
+        "androidx.lifecycle:lifecycle-viewmodel-ktx:${libs.lifecycleViewModelKtx}",
+        "com.squareup.retrofit2:retrofit:${libs.retrofit}",
+        "com.google.code.gson:gson:${libs.gson}",
+        "com.squareup.retrofit2:converter-gson:${libs.retrofitConverterGson}",
+        "org.jetbrains.kotlinx:kotlinx-coroutines-core:${libs.coroutinesCore}",
+        "org.jetbrains.kotlinx:kotlinx-coroutines-android:${libs.coroutinesAndroid}",
+        "androidx.navigation:navigation-fragment-ktx:${libs.navigationFragmentKtx}",
+        "androidx.navigation:navigation-ui-ktx:${libs.navigationUiKtx}",
+        "io.coil-kt:coil:${libs.coil}",
+        "androidx.room:room-runtime:${libs.roomRuntime}"
+    ]
+
+    annotationProcessors = [
+        "androidx.room:room-compiler:${libs.roomCompiler}"
+    ]
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/searchLeagueFragment">
+
+    <fragment
+        android:id="@+id/searchLeagueFragment"
+        android:name="fr.vyxs.fdjapp.app.ui.fragment.SearchLeagueFragment"
+        android:label="fragment_league_search"
+        tools:layout="@layout/fragment_league_search" >
+        <action
+            android:id="@+id/action_searchLeagueFragment_to_leagueDetailsFragment"
+            app:destination="@id/leagueDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/leagueDetailsFragment"
+        android:name="fr.vyxs.fdjapp.app.ui.fragment.LeagueDetailsFragment"
+        android:label="LeagueDetailsFragment" >
+        <argument
+            android:name="teamName"
+            app:argType="string" />
+    </fragment>
+</navigation>
